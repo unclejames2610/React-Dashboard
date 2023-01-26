@@ -44,12 +44,19 @@ function App() {
               </button>
             </TooltipComponent>
           </div>
+          {/* <div
+            className={`fixed sidebar dark:bg-secondary-dark-bg bg-white ${
+              activeMenu ? "w-72 block" : "w-0 hidden"
+            }`}
+          >
+            <Sidebar />
+          </div> */}
           {activeMenu ? (
-            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
               <Sidebar />
             </div>
           ) : (
-            <div className="w-0 dark:bg-secondary-dark-bg">
+            <div className="w-0  dark:bg-secondary-dark-bg">
               <Sidebar />
             </div>
           )}
