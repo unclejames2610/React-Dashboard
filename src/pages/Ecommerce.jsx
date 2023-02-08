@@ -18,6 +18,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 import product9 from "../data/product9.jpg";
 
 const Ecommerce = () => {
+  const { currentColor } = useStateContext();
   return (
     <div className="mt-12">
       <div
@@ -28,7 +29,7 @@ const Ecommerce = () => {
           className="bg-white dark:text-gray-200
          dark:bg-secondary-dark-bg h-44 
          rounded-xl w-full lg:w-80 p-8 pt-9 m-3 
-         bg-hero-pattern bg-no-repeat bg-cover bg-center"
+         "
         >
           <div className="flex justify-between items-center">
             <div>
@@ -39,7 +40,7 @@ const Ecommerce = () => {
           <div className="mt-6">
             <Button
               color="white"
-              bgColor="blue"
+              bgColor={currentColor}
               text="Download"
               borderRadius="10px"
               size="md"
@@ -78,7 +79,7 @@ const Ecommerce = () => {
 
       <div className="flex gap-10 flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 rounded-2xl md:w-780">
-          <div className="flex justify-between">
+          <div className="flex justify-between p-5">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
               <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
@@ -115,19 +116,19 @@ const Ecommerce = () => {
 
               <div className="mt-5">
                 <SparkLine
-                  currentColor="blue"
+                  currentColor={currentColor}
                   id="line-sparkline"
                   type="Line"
                   height="80px"
                   width="250px"
                   data={SparklineAreaData}
-                  color="blue"
+                  color={currentColor}
                 />
               </div>
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor="blue"
+                  bgColor={currentColor}
                   text="Download Report"
                   borderRadius="10px"
                 />
