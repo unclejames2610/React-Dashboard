@@ -27,7 +27,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 
 import "./App.css";
 
-function App() {
+const App = () => {
   const {
     activeMenu,
     themeSettings,
@@ -35,6 +35,7 @@ function App() {
     currentColor,
     currentMode,
   } = useStateContext();
+
   return (
     <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
@@ -110,6 +111,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
