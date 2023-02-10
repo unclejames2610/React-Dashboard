@@ -7,7 +7,13 @@ import { cartData } from "../data/dummy";
 import { Button } from ".";
 
 const Cart = () => {
-  const { currentColor, setIsClicked, initialState } = useStateContext();
+  const {
+    currentColor,
+    setIsClicked,
+    initialState,
+    handleClick,
+    handleClickClose,
+  } = useStateContext();
   return (
     <div className="bg-half-transparent w-full fixed nav-item top-0 right-0">
       <div
@@ -19,7 +25,7 @@ const Cart = () => {
           <p className="font-semibold text-lg">Shopping Cart</p>
           <button
             type="button"
-            onClick={() => setIsClicked(false)}
+            onClick={() => handleClickClose("cart")}
             style={{ color: "rgb(153, 171, 180)", borderRadius: "50%" }}
             className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray dark:hover:bg-custom-dark"
           >
